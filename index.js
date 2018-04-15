@@ -1,4 +1,4 @@
-function init() {
+function initForm() {
   var formTemplate = document.getElementById("recipe-form-template").innerHTML;
 
   var template = Handlebars.compile(formTemplate);
