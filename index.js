@@ -37,6 +37,16 @@ function displayEditForm() {
   document.getElementById("main").innerHTML = template(recipe)
 }
 
+function getRecipeVals() {
+  var ingredientsNodes = document.getElementsByName("ingredients")
+  var ingredients = []
+  for(var i=0; i<ingredientsNodes.length;i++) {
+    if(ingredientsNodes[i].value !== "") {
+      ingredients.push(ingredientsNodes[i].value)
+    }
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
